@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -21,3 +22,7 @@ rails db:setup
 
 * Deployment instructions
 
+=======
+# zendesksso
+A proof of concept about Single sign-on (SSO) options in Zendesk with Ruby on Rails and JWT gem
+>>>>>>> 58cbebd98e9d402e8f14863c1f0672cad1419b5c
