@@ -1,0 +1,19 @@
+<h1> Single sign-on (SSO) options in Zendesk</h1>
+
+<br>
+<% if user_signed_in? %>
+ <%= link_to "New request", zendesk_sso_sign_in_path() %> 
+ <br><br>
+ <%= link_to "Zendesk Normal", "http://#{ENV['ZD_SUBDOMAIN']}.zendesk.com/access/normal/"%>
+ <br><br>
+ <%= link_to 'Log out', destroy_user_session_path, :method=>'delete', class: "glyphicon glyphicon-user", title: "&nbsp; Cerrar sesión" %>
+  <% else%>
+  <%= link_to t(".login"),  new_user_session_path, class: "active glyphicon glyphicon-user" %>
+  <br><br>
+ <%= link_to "Go to Help Center", "http://#{ENV['ZD_SUBDOMAIN']}.zendesk.com/" %> 
+ <br><br>
+ <%= link_to "Login Zendesk Normal", "http://#{ENV['ZD_SUBDOMAIN']}.zendesk.com/access/normal/"%>
+<br><br>
+<%= link_to "Request ID 2", "https://devtest43.zendesk.com/hc/en-us/requests/2" %>
+
+<% end %>

@@ -1,0 +1,8 @@
+<h1>ZenDesk Sign out</h1>
+
+ <%= link_to "Go back ZenDesk", zendesk_sso_sign_in_path() %> 
+ <br><br>
+ <%= link_to "Zendesk Normal", "http://#{ENV['ZD_SUBDOMAIN']}.zendesk.com/access/normal/"%>
+ <br><br>
+
+ <%= link_to 'Log out', destroy_user_session_path, :method=>'delete', class: "glyphicon glyphicon-user", title: "&nbsp; Cerrar sesión" %>
